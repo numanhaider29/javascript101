@@ -24,13 +24,32 @@ let myObject =    // Object
 }
 
 const myfunction =  function  (){
-console.log("Hello world")
+//console.log("Hello world")
 }
 
-console.log(typeof(bignumber)) // bigint
-console.log(typeof(anotherid)) // symbol
-console.log(typeof(myObject)) // object
-console.log(typeof(names)) // object
+// console.log(typeof(bignumber)) // bigint
+// console.log(typeof(anotherid)) // symbol
+// console.log(typeof(myObject)) // object
+// console.log(typeof(names)) // object
+
+
+// Stack (premitive ) when used a copy is provided
+// Heap (Non-Premitive) when used refrence is provided means original value is manuplated
+
+let myYoutubeName = "mystery,Myths and facts"
+let anotherName = myYoutubeName;
+anotherName = "facts around the world"
+console.log(myYoutubeName) // mystery,Myths and facts
+console.log(anotherName) // facts around the world
+
+let user1= {
+    email:"user@google.com",
+    ID : "34601"
+}
+let user2 = user1;
+user2.email = "numanhaider29@gmail.com"
+console.log(user1.email) // numanhaider29@gmail.com
+console.log(user2.email) // numanhaider29@gmail.com
 
 
 
