@@ -59,11 +59,11 @@ const course = {
 
 // console.log(course.courseinstructor)
 
-const {courseinstructor:instructor} = course
+const {courseinstructor:instructor} = course        // this line indicates the destructuring techniques
 //console.log(courseinstructor);
 console.log(instructor)
 
-// data on apis is present in these two below forms 1> objects and 2> ojects in an array
+                 // data on apis is present in these two below forms 1> objects and 2> ojects in an array
 // {
 //     "name":"Numan",
 //     "coursename":"js in hindi",
@@ -75,4 +75,3 @@ console.log(instructor)
 // [
 //     {},{},{}
 // ]
-
