@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Programming | DOM</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+
+   <script>
+
+    // non- optimized version
+    function addLanguage(langName){
+        const li =  document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage('python')
+    addLanguage('typescript')
+
+// optimized version
+    function addOptiLanguage (langName){
+       const li = document.createElement('li')
+       li.appendChild(document.createTextNode(langName))
+       document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('golang')
+
+    // Editing values
+
+const secondLang = document.querySelector("li:nth-child(2)")
+    //secondLang.innerHTML = 'mojo'
+    const newli = document.createElement('li')
+    newli.textContent = "MOJO"
+    secondLang.replaceWith(newli)
+
+    //edit
+const firstLang = document.querySelector("li:nth-child(1)")
+firstLang.outerHTML = '<li>Type Script</>'
+
+    // remove
+
+    const lastLanguage = document.querySelector("li:last-child")
+    lastLanguage.remove()
+   </script>
+</body>
+</html>
