@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Basic card styles */
+        .card {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        /* Style for the image */
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Style for the link */
+        .card a {
+            display: block;
+            
+           
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Hover effect for the link */
+        .card a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="hiteshchoudary_info">About Teacher</button>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+   const xhr = new XMLHttpRequest()
+   xhr.open('GET', requestUrl)
+   xhr.onreadystatechange = function (){
+    console.log(xhr.readyState);
+    if (xhr.readyState === 4) {
+        const data = JSON.parse(this.responseText)
+        console.log(data.followers)
+        console.log(data.avatar_url) 
+        console.log(data.followers_url) 
+
+    document.querySelector('#hiteshchoudary_info').addEventListener('click',function(){
+    document.querySelector('#hiteshchoudary_info').innerHTML = `
+    <div class="card">
+    <img src= ${data.avatar_url}>
+     <a href= ${data.blog}>link to follow sir hitesh youtube blog</a>
+</div>
+    ` 
+   })
+    }
+   }
+   xhr.send()
+
+   
+</script>
+</html>
