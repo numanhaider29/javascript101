@@ -1,0 +1,19 @@
+{
+  "name": "js_hindi",
+  "description": "this is the first time attempt to use github for recovery",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/numanhaider29/javascript101.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/numanhaider29/javascript101/issues"
+  },
+  "homepage": "https://github.com/numanhaider29/javascript101#readme"
+}
