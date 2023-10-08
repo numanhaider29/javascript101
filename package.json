@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/numanhaider29/javascript101/issues"
   },
-  "homepage": "https://github.com/numanhaider29/javascript101#readme"
+  "homepage": "https://github.com/numanhaider29/javascript101#readme",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
 }

@@ -1,3 +1,4 @@
+
 // const promiseOne = new Promise(function(resolve,reject){
 //     // Do an async task
 //     // DB calls, cryptography
@@ -184,19 +185,38 @@
 // }
 // consumePromiseFive()
 
+
+
+
+
+
+
+
+
+
+
+
+
+// *****************fetch drama **********method 1**********
+
+// const fetch = require("node-fetch");
 // async function getAllUsers(){
 //     try {
 //         const response =  await fetch('https://jsonplaceholder.typicode.com/users')
-       
-//          const data =    response.json()
-//          console.log(data)
+//        console.log(response)
+//           const data =   await response.json()
+//           console.log(data)
 //     } catch (error) {
 //         console.log("E:", error);
 //     }
 //     }
+//     getAllUsers()
 
-    //getAllUsers()
-    
+
+
+
+// *****************fetch drama **********method 2**********
+const fetch = require("node-fetch");
 fetch('https://jsonplaceholder.typicode.com/users')
 .then((response)=>{
     return response.json()
@@ -207,5 +227,10 @@ fetch('https://jsonplaceholder.typicode.com/users')
     console.log(error)
 })
     
+
+  
+
+
     
+
     
